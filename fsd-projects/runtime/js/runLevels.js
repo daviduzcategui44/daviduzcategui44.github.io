@@ -20,7 +20,7 @@ var runLevels = function (window) {
     // BEGIN EDITING YOUR CODE HERE
     
     
-    function createSawBlade (x, y, damage){
+    function createSawBlade (x, y, damage, image){
       var hitZoneSize = 25;
       var damageFromObstacle = damage;
       var sawBladeHitZone = game.createObstacle(hitZoneSize, damageFromObstacle);
