@@ -102,7 +102,7 @@ function addNewGhostElement(ghost, id) {
 //////////////////
 
 // this should move all of the ghosts
-function update) {
+function update() {
   // loop over the ghosts array. We use the maxGhosts variable instead of ghosts.length
   // to make seeing issues in the debugger slightly easier (in practice, you should use
   // ghosts.length, but do NOT change it here)
@@ -136,7 +136,7 @@ function moveGhost(ghost) {
 // this bounces ghosts if they hit a wall
 function bounceGhost(ghost) {
   // this bounces off the left wall
-  if (ghost.x < 0{
+  if (ghost.x < 0){
     ghost.x -= ghost.speedX;
     ghost.speedX *= -1;
   }
