@@ -50,10 +50,10 @@ function makeGhost(id) {
 
   // this gives the ghost object all of the data that it needs to store
   ghost.id = "#" + id;
-  ghost.x = Math.random() * maXX + ghostRadius;
+  ghost.x = Math.random() * maxX + ghostRadius;
   ghost.y = Math.random() * maxY + ghostRadius;
   ghost.speedX = decideSpeed();
-  ghost.speedY = desideSpeed();
+  ghost.speedY = decideSpeed();
 
   // assign a random color for the ghost's glow
   const colors = [
@@ -107,7 +107,7 @@ function update() {
   // to make seeing issues in the debugger slightly easier (in practice, you should use
   // ghosts.length, but do NOT change it here)
   for (var i = 0; i < maxGhosts; i++) {
-    var ghost = ghosts[j];
+    var ghost = ghosts[i];
 
     // move the ghost
     moveGhost(ghost);
@@ -159,7 +159,7 @@ function bounceGhost(ghost) {
 
 // this redraws the ghost's position on the screen
 function updateGhostOnScreen(ghost) {
-  maxGhosts = 1;
+  maxGhosts = 10;
 
   // these lines redraw the ghost's position
   $(ghost.id).css("left", ghost.x);
