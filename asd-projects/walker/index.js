@@ -25,7 +25,7 @@ function runProgram() {
     speedX: 0,
     speedY: 0,
   };
-  console.log(walker.x, walker.y);
+  
 
   // one-time setup
   var interval = setInterval(newFrame, FRAMES_PER_SECOND_INTERVAL); // execute newFrame every 0.0166 seconds (60 Frames per second)
@@ -48,6 +48,7 @@ function runProgram() {
   */
   function newFrame() {
     repositionGameItem();
+    console.log(walker.x, walker.y);
   }
 
   /* 
@@ -75,6 +76,11 @@ function runProgram() {
   ////////////////////////////////////////////////////////////////////////////////
   ////////////////////////// HELPER FUNCTIONS ////////////////////////////////////
   ////////////////////////////////////////////////////////////////////////////////
+  function redrawGameItem(){
+    
+  }
+
+
   function repositionGameItem(){
     walker.x += walker.speedX;
     walker.y += walker.speedY;
