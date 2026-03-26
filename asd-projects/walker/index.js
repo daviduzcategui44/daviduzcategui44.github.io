@@ -49,6 +49,8 @@ function runProgram() {
   function newFrame() {
     repositionGameItem();
     console.log(walker.x, walker.y);
+    redrawGameItem();
+    console.log("Walker position:", walker.x, walker.y);
   }
 
   /* 
@@ -77,8 +79,9 @@ function runProgram() {
   ////////////////////////// HELPER FUNCTIONS ////////////////////////////////////
   ////////////////////////////////////////////////////////////////////////////////
   function redrawGameItem(){
-    
-  }
+    $("#walker").css("left", walker.x);
+    $("#walker").css("top", walker.y);
+  };
 
 
   function repositionGameItem(){
