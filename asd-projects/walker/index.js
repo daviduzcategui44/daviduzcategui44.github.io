@@ -98,7 +98,9 @@ function runProgram() {
   };
   
   function wallCollision(){
-    
+   if
+  $("#board").width()
+  $("#board").height()
   }
 
   function repositionGameItem(){
