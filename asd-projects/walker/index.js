@@ -26,7 +26,7 @@ function runProgram() {
     speedY: 0,
   };
   
-  
+  document.addEventListener("keyup", handleKeyUp);
 
   // one-time setup
   var interval = setInterval(newFrame, FRAMES_PER_SECOND_INTERVAL); // execute newFrame every 0.0166 seconds (60 Frames per second)
@@ -80,6 +80,13 @@ function runProgram() {
     }
   }
 
+  function handleKeyUp(event){
+    if (event.key === "ArrowUp" || event.key === "ArrowDown") {
+    speedY = 0;
+   } else if (event.key === "ArrowLeft" || event.key === "ArrowRight") {
+    speedX = 0;
+   }
+  }
 
 
   ////////////////////////////////////////////////////////////////////////////////
@@ -89,7 +96,10 @@ function runProgram() {
     $("#walker").css("left", walker.x);
     $("#walker").css("top", walker.y);
   };
-
+  
+  function wallCollision(){
+    
+  }
 
   function repositionGameItem(){
     walker.x += walker.speedX;
